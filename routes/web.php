@@ -17,10 +17,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/questionnaire/create', 'QuestionnairesController@create');
+Route::get('/questionnaires/create', 'QuestionnairesController@create');
 
-Route::get('/questionnaire/show', 'QuestionnairesController@store');
+Route::post('/questionnaires', 'QuestionnairesController@store');
 
-Route::get('/questionnaire/create', 'QuestionsController@create');
+Route::get('/questionnaires', 'QuestionnairesController@index');
 
-Route::post('/questionnaire/show', 'QuestionnairesController@store');
+
+//Route::get('/questions/create', 'QuestionsController@create');
+
+//Route::post('/questions/show', 'QuestionsController@store');

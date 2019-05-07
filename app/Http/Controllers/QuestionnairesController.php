@@ -3,16 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\questionnaires;
 
 class QuestionnairesController extends Controller
 {
+  public function index()
+      {
+          $questionnaires = questionnaires::all();
+          return view('questionnaires.index',compact('questionnaires',$questionnaires));
+      }
+
+
   public function create()
   {
-      return view('questionnaire.create');
+      return view('questionnaires.create');
   }
 
-  public function store()
+  public function store(Request $request)
   {
-      return view('questionnaire.show');
+      questionnaires::create($request->all());
+
+      return redirect('/questionnaires');
   }
+
 }
