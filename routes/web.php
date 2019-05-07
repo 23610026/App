@@ -23,6 +23,16 @@ Route::post('/questionnaires', 'QuestionnairesController@store');
 
 Route::get('/questionnaires', 'QuestionnairesController@index');
 
+Route::get('/questions/create', 'QuestionsController@create');
+
+Route::post('/questions', 'QuestionsController@store');
+
+Route::get('/questions', 'QuestionsController@index');
+
+Route::get('/delete/{id}', 'QuestionnairesController@delete');
+
+Route::get('/delete/{id}', 'QuestionsController@delete');
+
 
 //Route::get('/questions/create', 'QuestionsController@create');
 

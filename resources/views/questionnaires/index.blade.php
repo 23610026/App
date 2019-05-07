@@ -20,11 +20,16 @@
             <tr>
                 <th scope="row">{{$questionnaires->id}}</th>
                 <td>{{$questionnaires->Title}}</td>
-                <td><button class="addbtn">Add</button></td>
+                <td><button onclick="location.href='/questions/create';" id="add">Add</button></td>
                 <td><button class="editbtn">Edit</button></td>
-                <td><button class="deletebtn">Delete</button></td>
+                <td>
+                <a href="/delete/{{ $questionnaires->id }}">
+                    <button> Delete </a>
+                </td>
             </tr>
         @endforeach
         </tbody>
     </table>
+
+    <td><button onclick="location.href='/questions';" id="Answers">View Reponses</button></td>
 @endsection

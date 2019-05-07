@@ -26,4 +26,11 @@ class QuestionnairesController extends Controller
       return redirect('/questionnaires');
   }
 
+  public function delete($id)
+  {
+    questionnaires::destroy('questionnaires')->where('id', $id)->delete();
+    return redirect('/questionnaires');
+  }
+
+
 }

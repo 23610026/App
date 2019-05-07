@@ -15,9 +15,12 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
           $table->Increments('id');
-          $table->Integer('Questionnaire id');
-          $table->String('Title');
-          $table->boolean('Question');
+          $table->String('Title')->nullable();
+          $table->String('Question1')->nullable();
+          $table->String('Question2')->nullable();
+          $table->String('Question3')->nullable();
+          $table->String('Question4')->nullable();
+          $table->String('Question5')->nullable();
           $table->timestamps();
         });
     }
