@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    <button id="Create">Create New Questionnaire</button>
-                    <button id="Show">View all Questionnaires</button>
+                    <button onclick="location.href='/questionnaire/create';" id="Create">Create New Questionnaire</button>
+                    <button onclick="location.href='/questionnaire/show';" id="Show">View all Questionnaires</button>
 
                 </div>
             </div>

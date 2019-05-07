@@ -6,5 +6,13 @@ use Illuminate\Http\Request;
 
 class QuestionnairesController extends Controller
 {
-    //
+  public function create()
+  {
+      return view('questionnaire.create');
+  }
+
+  public function store()
+  {
+      return view('questionnaire.show');
+  }
 }
