@@ -5,16 +5,14 @@
         <div class="alert alert-info">{{ Session::get('message') }}</div>
     @endif
     <table class="table">
-        <thead class="thead-dark">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Questionnaire</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th bgcolor="lightgrey" scope="col">#</th>
+            <th bgcolor="lightgrey" scope="col" style="font-weight: bold";>Current Questionnaires</th>
+            <th bgcolor="lightgrey" scope="col"></th>
+            <th bgcolor="lightgrey" scope="col"></th>
+            <th bgcolor="lightgrey" scope="col"></th>
 
         </tr>
-        </thead>
         <tbody>
         @foreach($questionnaires as $questionnaires)
             <tr>
@@ -31,5 +29,11 @@
         </tbody>
     </table>
 
-    <td><button onclick="location.href='/questions';" id="Answers">View Reponses</button></td>
+<div style="text-align:right; padding-right:10px;">
+        <button onclick="location.href='/home';" id="View Respondents">Home</button>
+    <button onclick="location.href='/questions';" id="Answers">View Questions</button>
+</div>
+
+
+
 @endsection

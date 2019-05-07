@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\questions;
+use App\questionnaires;
 
 class QuestionsController extends Controller
 {
@@ -11,12 +12,13 @@ class QuestionsController extends Controller
       {
           $questions = questions::all();
           return view('questions.index',compact('questions',$questions));
-      }
 
+      }
 
   public function create()
   {
       return view('questions.create');
+
   }
 
   public function store(Request $request)
@@ -31,6 +33,10 @@ class QuestionsController extends Controller
     questions::destroy('questions')->where('id', $id)->delete();
     return redirect('/questions');
   }
+
+public function show() {
+
+}
 
 
 }

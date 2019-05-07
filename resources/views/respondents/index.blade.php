@@ -8,7 +8,7 @@
 
         <tr>
           <th bgcolor="lightgrey" scope="col">#</th>
-          <th bgcolor="lightgrey" scope="col" style="font-weight: bold";>Created Questions</th>
+          <th bgcolor="lightgrey" scope="col" style="font-weight: bold";>Respondents</th>
           <th bgcolor="lightgrey" scope="col"></th>
           <th bgcolor="lightgrey" scope="col"></th>
           <th bgcolor="lightgrey" scope="col"></th>
@@ -19,20 +19,17 @@
 
         </tr>
 
-
         <tbody>
-        @foreach($questions as $questions)
+        @foreach($respondents as $respondents)
             <tr>
-                <th scope="row">{{$questions->id}}</th>
-                <td>{{$questions->Title}}</td>
-                <td>{{$questions->Question1}}</td>
-                <td>{{$questions->Question2}}</td>
-                <td>{{$questions->Question3}}</td>
-                <td>{{$questions->Question4}}</td>
-                <td>{{$questions->Question5}}</td>
+                <th scope="row">{{$respondents->id}}</th>
+                <td>{{$respondents->Name}}</td>
+                <td>{{$respondents->Gender}}</td>
+                <td>{{$respondents->EmailAddress}}</td>
+                <td>{{$respondents->Consent}}</td>
                 <td><button class="editbtn">Edit</button></td>
                 <td>
-                  <a href="/delete/{{ $questions->id }}">
+                  <a href="/delete/{{ $respondents->id }}">
                       <button> Delete </a>
                 </td>
             </tr>
@@ -40,6 +37,7 @@
         </tbody>
     </table>
 <div style="text-align:right; padding-right:10px;">
-        <button onclick="location.href='/home';" id="Home">Done</button>
-      </div>
+        <button onclick="location.href='/home';" id="View Respondents">Home</button>
+    <button onclick="location.href='/responses';" id="View Responses">View Responses</button>
+  </div>
 @endsection

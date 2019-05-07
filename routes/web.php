@@ -29,9 +29,23 @@ Route::post('/questions', 'QuestionsController@store');
 
 Route::get('/questions', 'QuestionsController@index');
 
+Route::get('/responses/create', 'ResponsesController@create');
+
+Route::post('/responses', 'ResponsesController@store');
+
+Route::get('/responses', 'ResponsesController@index');
+
+Route::get('/respondents/create', 'RespondentsController@create');
+
+Route::post('/respondents', 'RespondentsController@store');
+
+Route::get('/respondents', 'RespondentsController@index');
+
 Route::get('/delete/{id}', 'QuestionnairesController@delete');
 
 Route::get('/delete/{id}', 'QuestionsController@delete');
+
+Route::view('/thanks', 'thanks');
 
 
 //Route::get('/questions/create', 'QuestionsController@create');

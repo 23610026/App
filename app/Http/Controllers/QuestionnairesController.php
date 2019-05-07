@@ -11,6 +11,7 @@ class QuestionnairesController extends Controller
       {
           $questionnaires = questionnaires::all();
           return view('questionnaires.index',compact('questionnaires',$questionnaires));
+
       }
 
 
