@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <button id="Create">Create New Questionnaire</button>
+                    <button id="Show">View all Questionnaires</button>
+
                 </div>
             </div>
         </div>
