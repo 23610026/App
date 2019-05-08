@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+<!-- Buttons that promote navigation -->
                     <button onclick="location.href='/questionnaires/create';" id="Create">Create New Questionnaire</button>
                     <button onclick="location.href='/questionnaires';" id="Show">View all Questionnaires</button>
                     <button onclick="location.href='/respondents/create';" id="Complete">Complete Questionnaire</button>

@@ -15,7 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable = [ //Offers the fillable fields of the user
         'name', 'email', 'password',
     ];
 
@@ -24,7 +24,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
+    protected $hidden = [ //notes that the password field will have concealed text
         'password', 'remember_token',
     ];
 

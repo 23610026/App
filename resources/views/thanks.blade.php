@@ -9,7 +9,7 @@
 
 
 
-
+<!-- Simple design to help respondent acknowledge they have completed a questionnaire -->
 <p style="padding: 10px 10px 0px 10px;"> Thank you for taking part in the questionnaire. </p>
 
 <button onclick="location.href='/home';" id="Home">Done</button>

@@ -9,7 +9,7 @@ use App\questionnaires;
 class QuestionsController extends Controller
 {
   public function index()
-      {
+      { //calls the data from the database tables and allows them to be accessed in the view being returned.
           $questions = questions::all();
           return view('questions.index',compact('questions',$questions));
 
@@ -17,18 +17,18 @@ class QuestionsController extends Controller
 
   public function create()
   {
-      return view('questions.create');
+      return view('questions.create');//directs the user to the specific view
 
   }
 
-  public function store(Request $request)
+  public function store(Request $request) //stores the input data into the desired table
   {
       questions::create($request->all());
 
       return redirect('/questions');
   }
 
-  public function delete($id)
+  public function delete($id) //broken feature 
   {
     questions::destroy('questions')->where('id', $id)->delete();
     return redirect('/questions');

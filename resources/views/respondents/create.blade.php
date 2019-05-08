@@ -9,15 +9,15 @@
 
 
 
-<form action="/respondents" method="post" style="padding: 10px 10px 0px 10px;">
+<form action="/respondents" method="post" style="padding: 10px 10px 0px 10px;"> <!-- Notes the beginnin of a forum and location to which it is sent -->
         {{ csrf_field() }}
 <div class="form-group">
     <label for="Name">Name</label>
-    <input type="text" class="form-control" id="1" name="Name"></textarea>
+    <input type="text" class="form-control" id="1" name="Name"></textarea> <!-- 'Name' in each line of code is the specific field data entered is stored to -->
 </div>
 <div class="form-group">
             <label for="Gender">Gender</label>
-            <select class="form-control" name="Gender">
+            <select class="form-control" name="Gender"> <!-- Drop down table used to gather data for table -->
                 <option>Male</option>
                 <option>Female</option>
                 <option>Prefer not to say</option>
@@ -30,7 +30,7 @@
 <div class="form-group">
             <label for="Consent">Consent</label><br/>
             <p> Do you consent to your information being used for the purpose of research on Questionnaire Design? </p>
-            <label class="radio-inline"><input type="radio" name="Consent" value="1"> Yes</label>
+            <label class="radio-inline"><input type="radio" name="Consent" value="1"> Yes</label> <!-- radio buttons employed for database data collection -->
             <label class="radio-inline"><input type="radio" name="Conset" value="0"> No</label>
                 </div>
 @if ($errors->any())

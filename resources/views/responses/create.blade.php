@@ -7,13 +7,13 @@
             <div class="card">
                 <div class="card-header"><h1  style="font-weight: bold; padding: 10px;"> Responses </h1></div>
 
-<form action="/responses" method="post" style= "padding: 10px 10px 10px 10px">
+<form action="/responses" method="post" style= "padding: 10px 10px 10px 10px"> <!-- Beginning of forum -->
         {{ csrf_field() }}
         <div class="form-group">
           <p>To what extent do you agree with the following statements:</p>
             <label for="question_1">
             1) Questionnaires with close-ended questions are more likely to be completed, than questionnaires made up of open-ended questions.</label>
-            <select class="form-control" name="Question1">
+            <select class="form-control" name="Question1"> <!-- dropdown lists to collect data -->
                 <option>Stongly Agree</option>
                 <option>Agree</option>
                 <option>Neither</option>
@@ -53,7 +53,7 @@
         </div>
         <div class="form-group">
             <label for="title"> 5) List 3 ways in which the interface of this questionnaire system could be improved to boost its response rate. </label>
-            <textarea type="text" class="form-control" id="productDescription" name="Question5"></textarea>
+            <textarea type="text" class="form-control" id="productDescription" name="Question5"></textarea> <!-- large text area to allow for user to enter unrestricted data -->
         </div>
         @if ($errors->any())
             <div class="alert alert-danger">
